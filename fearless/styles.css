@@ -46,6 +46,10 @@ img {
 .champion p {
   margin: 5px 0;
   font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 120px;
 }
 
 .champion img:hover {
@@ -72,12 +76,18 @@ img {
     width: 100px;
     height: 100px;
   }
+  .champion p {
+    max-width: 100px;
+  }
 }
 
 @media (max-width: 992px) {
   .champion img {
     width: 80px;
     height: 80px;
+  }
+  .champion p {
+    max-width: 80px;
   }
 }
 
@@ -88,5 +98,8 @@ img {
   }
   .champion {
     margin: 5px;
+  }
+  .champion p {
+    max-width: 60px;
   }
 }
